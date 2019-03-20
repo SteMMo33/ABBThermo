@@ -1,14 +1,23 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { ImpostazioniDiRetePage } from '../pages/impostazioni-di-rete/impostazioni-di-rete';
+import { LoginPage } from '../pages/login/login';
+import { ElencoCasePage } from '../pages/elenco-case/elenco-case';
+
+
+import { TemperaturaPage } from '../pages/temperatura/temperatura';
+
+
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  @ViewChild(Nav) navCtrl: Nav;
+    rootPage:any = TemperaturaPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -18,5 +27,14 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+  goToImpostazioniDiRete(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(ImpostazioniDiRetePage);
+  }goToLogin(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(LoginPage);
+  }goToElencoCase(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(ElencoCasePage);
+  }
 }
-

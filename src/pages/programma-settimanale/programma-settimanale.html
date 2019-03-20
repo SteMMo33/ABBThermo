@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Programma settimanale
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page11">
+  <div id="programmaSettimanale-markdown20" style="text-align:justify;" class="show-list-numbers-and-dots col-80 button-calm">
+    <p style="margin-top:0px;color:#000000;">
+      <strong>
+        Barra colorata della giornata
+      </strong>
+    </p>
+  </div>
+  <ion-list id="programmaSettimanale-list11">
+    <ion-item-divider color="light" id="programmaSettimanale-list-item-divider2">
+      Lunedì
+    </ion-item-divider>
+    <ion-item color="none" id="programmaSettimanale-list-item26">
+      00:00
+    </ion-item>
+    <ion-item color="none" id="programmaSettimanale-list-item27">
+      07:00
+    </ion-item>
+    <ion-item id="programmaSettimanale-select1">
+      <ion-label>
+        Selezionare:
+      </ion-label>
+      <ion-select name="preset">
+        <ion-option>
+          Comfort
+        </ion-option>
+        <ion-option>
+          Notte
+        </ion-option>
+        <ion-option>
+          Via
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button id="programmaSettimanale-button8" ion-button color="balanced" block>
+    Aggiungi intervallo tempo
+  </button>
+  <button id="programmaSettimanale-button9" ion-button color="positive" block on-click="goToElencoTermostati()">
+    Accetta
+  </button>
+</ion-content>

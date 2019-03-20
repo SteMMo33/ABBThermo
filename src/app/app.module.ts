@@ -1,16 +1,31 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { ImpostazioniDiRetePage } from '../pages/impostazioni-di-rete/impostazioni-di-rete';
+import { LoginPage } from '../pages/login/login';
+import { TemperaturaPage } from '../pages/temperatura/temperatura';
+import { ElencoCasePage } from '../pages/elenco-case/elenco-case';
+import { ElencoTermostatiPage } from '../pages/elenco-termostati/elenco-termostati';
+import { ElencoPresetPage } from '../pages/elenco-preset/elenco-preset';
+import { ProgrammaSettimanalePage } from '../pages/programma-settimanale/programma-settimanale';
+import { ModificaTemperaturaPage } from '../pages/modifica-temperatura/modifica-temperatura';
+
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    ImpostazioniDiRetePage,
+    LoginPage,
+    TemperaturaPage,
+    ElencoCasePage,
+    ElencoTermostatiPage,
+    ElencoPresetPage,
+    ProgrammaSettimanalePage,
+    ModificaTemperaturaPage
   ],
   imports: [
     BrowserModule,
@@ -19,7 +34,14 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    ImpostazioniDiRetePage,
+    LoginPage,
+    TemperaturaPage,
+    ElencoCasePage,
+    ElencoTermostatiPage,
+    ElencoPresetPage,
+    ProgrammaSettimanalePage,
+    ModificaTemperaturaPage
   ],
   providers: [
     StatusBar,
