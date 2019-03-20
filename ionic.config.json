@@ -1,5 +1,7 @@
 {
   "name": "ABBThermo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
