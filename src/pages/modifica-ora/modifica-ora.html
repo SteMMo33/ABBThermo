@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Modifica ora
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page14">
+  <ion-list id="modificaOra-list13">
+    <ion-item-divider color="light" id="modificaOra-list-item-divider4">
+      Lunedì
+    </ion-item-divider>
+    <ion-item color="none" id="modificaOra-list-item37">
+      07:00
+      <ion-icon name="build" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" id="modificaOra-list-item38">
+      13:00
+      <ion-icon name="build" item-right></ion-icon>
+    </ion-item>
+    <ion-item id="modificaOra-select3">
+      <ion-label>
+        Preset:
+      </ion-label>
+      <ion-select name="preset">
+        <ion-option>
+          Comfort
+        </ion-option>
+        <ion-option>
+          Notte
+        </ion-option>
+        <ion-option>
+          Assente
+        </ion-option>
+        <ion-option>
+          Economico
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button id="modificaOra-button14" ion-button color="positive" block on-click="goToElencoTermostati()">
+    Accetta
+  </button>
+</ion-content>

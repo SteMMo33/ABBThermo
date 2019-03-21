@@ -21,7 +21,7 @@
       </ion-item>
       <ion-item id="temperatura-list-item-container2">
         <div id="temperatura-markdown8" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#0006FF;font-size:44px;">
+          <p style="color:#0006FF;font-size:46px;">
             <strong>
               18.5
             </strong>
@@ -30,28 +30,30 @@
         </div>
       </ion-item>
       <ion-item color="energized" id="temperatura-list-item9">
-        <ion-icon name="arrow-up" item-left></ion-icon>
         Caldaia accesa
+        <ion-icon name="arrow-round-up" item-right></ion-icon>
       </ion-item>
       <ion-item id="temperatura-list-item-container4">
         <div id="temperatura-markdown15" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="margin-top:0px;color:#000000;font-size:26px;">
-            Set:
+          <p style="margin-top:0px;color:#000000;font-size:28px;">
+            <ion-icon name="add" item-left style="color:red"></ion-icon>
+            Manual Set: 
             <strong>
               19.5
             </strong>
             °C
+            <ion-icon name="remove" item-right style="color:darkblue"></ion-icon>
           </p>
         </div>
       </ion-item>
-      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
-        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
-      </div>
-      <ion-item color="assertive" id="temperatura-list-item7">
+      <ion-item color="assertive" on-click="goToElencoPreset()" id="temperatura-list-item7">
         <ion-icon name="thermometer" item-left></ion-icon>
-        Programma corrente
+        Programma: <strong>Economico</strong>
         <ion-note item-right></ion-note>
       </ion-item>
     </ion-list>
   </ion-card>
+  <button id="temperatura-button10" ion-button color="positive" block on-click="goToProgrammaSettimanale()">
+    Programmazione settimanale
+  </button>
 </ion-content>

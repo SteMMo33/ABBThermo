@@ -9,10 +9,10 @@ import { ProgrammaGiornalieroPage } from '../programma-giornaliero/programma-gio
 import { ModificaOraPage } from '../modifica-ora/modifica-ora';
 
 @Component({
-  selector: 'page-elenco-case',
-  templateUrl: 'elenco-case.html'
+  selector: 'page-modifica-ora',
+  templateUrl: 'modifica-ora.html'
 })
-export class ElencoCasePage {
+export class ModificaOraPage {
 
   constructor(public navCtrl: NavController) {
   }

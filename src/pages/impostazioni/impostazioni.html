@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Impostazioni
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <ion-list id="impostazioni-list2">
+    <ion-item id="impostazioni-input1">
+      <ion-label stacked>
+        Email:
+      </ion-label>
+      <ion-input type="email" placeholder="email" name="inEmail"></ion-input>
+    </ion-item>
+    <ion-item id="impostazioni-toggle1">
+      <ion-label>
+        Ricevi notifiche
+      </ion-label>
+      <ion-toggle color="positive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item-divider color="light" id="impostazioni-list-item-divider1">
+      Autenticazione
+    </ion-item-divider>
+    <ion-item id="impostazioni-input3">
+      <ion-label stacked>
+        Password:
+      </ion-label>
+      <ion-input type="text" placeholder="password" name="inPassword"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button id="impostazioni-button1" ion-button color="positive" block>
+    Accetta
+  </button>
+  <div id="impostazioni-markdown10" class="show-list-numbers-and-dots">
+    <ul>
+      <li>
+        Versione:
+        <strong>
+          0.0.1
+        </strong>
+      </li>
+      <li>
+        OS:
+        <strong>
+          Android X.Y
+        </strong>
+      </li>
+    </ul>
+  </div>
+</ion-content>

@@ -5,14 +5,13 @@ import { TemperaturaPage } from '../temperatura/temperatura';
 import { ElencoPresetPage } from '../elenco-preset/elenco-preset';
 import { ModificaTemperaturaPage } from '../modifica-temperatura/modifica-temperatura';
 import { ProgrammaSettimanalePage } from '../programma-settimanale/programma-settimanale';
-import { ProgrammaGiornalieroPage } from '../programma-giornaliero/programma-giornaliero';
 import { ModificaOraPage } from '../modifica-ora/modifica-ora';
 
 @Component({
-  selector: 'page-elenco-case',
-  templateUrl: 'elenco-case.html'
+  selector: 'page-programma-giornaliero',
+  templateUrl: 'programma-giornaliero.html'
 })
-export class ElencoCasePage {
+export class ProgrammaGiornalieroPage {
 
   constructor(public navCtrl: NavController) {
   }
