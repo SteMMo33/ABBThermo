@@ -13,6 +13,8 @@ import { ModificaOraPage } from '../modifica-ora/modifica-ora';
 })
 export class TemperaturaPage {
 
+  private temp = 19.5;
+
   constructor(public navCtrl: NavController) {
   }
   goToElencoPreset(params){
@@ -36,5 +38,13 @@ export class TemperaturaPage {
   }goToModificaOra(params){
     if (!params) params = {};
     this.navCtrl.push(ModificaOraPage);
+  }
+
+  incTemp(){
+    this.temp += 0.5;
+  }
+
+  decTemp(){
+    this.temp -= 0.5;
   }
 }

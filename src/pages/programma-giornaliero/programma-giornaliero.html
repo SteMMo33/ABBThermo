@@ -9,34 +9,36 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page13">
-  <div id="programmaGiornaliero-markdown9" style="text-align:justify;" class="show-list-numbers-and-dots col-80 button-calm">
-    <p style="margin-top:0px;color:#000000;">
-      <strong>
-        Barra colorata della giornata
-      </strong>
-    </p>
+
+  <div class="stacked-bar-graph">
+      <span style="width:20%" class="bar-1"></span>
+      <span style="width:15%" class="bar-2"></span>
+      <span style="width:30%" class="bar-3"></span>
+      <span style="width:10%" class="bar-1"></span>
+      <span style="width:25%" class="bar-2"></span>
   </div>
+
   <ion-list id="programmaGiornaliero-list12">
-    <ion-item-divider color="light" id="programmaGiornaliero-list-item-divider3">
-      Lunedì
+    <ion-item-divider color="light" id="programmaGiornaliero-day">
+      {{dayDesc}}
     </ion-item-divider>
     <ion-item color="none" on-click="goToModificaOra()" id="programmaGiornaliero-list-item29">
       00:00 - 07:00 Comfort
-      <ion-icon name="build" item-right></ion-icon>
+      <ion-icon name="create" item-right></ion-icon>
     </ion-item>
     <ion-item color="none" id="programmaGiornaliero-list-item30">
       07:00 - 22:00 Comfort
-      <ion-icon name="remove-circle" item-right></ion-icon>
+      <ion-icon name="create" item-right></ion-icon>
     </ion-item>
     <ion-item color="none" id="programmaGiornaliero-list-item31">
       22:00 - 24:00 Night
-      <ion-icon name="remove-circle" item-right></ion-icon>
+      <ion-icon name="create" item-right></ion-icon>
     </ion-item>
   </ion-list>
   <button id="programmaGiornaliero-button11" ion-button color="balanced" block on-click="goToModificaOra()">
     Aggiungi intervallo tempo
   </button>
-  <button id="programmaGiornaliero-button12" ion-button color="positive" block on-click="goToElencoTermostati()">
+  <button id="programmaGiornaliero-button12" ion-button color="positive" block on-click="goToAccept()">
     Accetta
   </button>
 </ion-content>

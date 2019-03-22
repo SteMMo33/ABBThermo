@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { ElencoTermostatiPage } from '../elenco-termostati/elenco-termostati';
 import { TemperaturaPage } from '../temperatura/temperatura';
 import { ElencoPresetPage } from '../elenco-preset/elenco-preset';
@@ -13,8 +13,12 @@ import { ModificaOraPage } from '../modifica-ora/modifica-ora';
 })
 export class ProgrammaGiornalieroPage {
 
-  constructor(public navCtrl: NavController) {
+  private dayDesc : string
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.dayDesc = this.navParams.get('dayDesc');    
   }
+
   goToElencoTermostati(params){
     if (!params) params = {};
     this.navCtrl.push(ElencoTermostatiPage);
@@ -36,5 +40,9 @@ export class ProgrammaGiornalieroPage {
   }goToModificaOra(params){
     if (!params) params = {};
     this.navCtrl.push(ModificaOraPage);
+  }
+
+  goToAccept(){
+    this.navCtrl.pop()
   }
 }

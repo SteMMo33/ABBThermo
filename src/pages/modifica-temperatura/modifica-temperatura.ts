@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ElencoPresetPage } from '../elenco-preset/elenco-preset';
-import { ModificaTemperaturaPage } from '../modifica-temperatura/modifica-temperatura';
 
 @Component({
   selector: 'page-modifica-temperatura',
@@ -9,13 +8,29 @@ import { ModificaTemperaturaPage } from '../modifica-temperatura/modifica-temper
 })
 export class ModificaTemperaturaPage {
 
+  private temp = 17.5
+
   constructor(public navCtrl: NavController) {
   }
   goToElencoPreset(params){
     if (!params) params = {};
     this.navCtrl.push(ElencoPresetPage);
-  }goToModificaTemperatura(params){
+  }
+  
+  goToModificaTemperatura(params){
     if (!params) params = {};
     this.navCtrl.push(ModificaTemperaturaPage);
+  }
+
+  goToAccept(){
+    this.navCtrl.pop()
+  }
+
+  incTemp(){
+    this.temp += 0.5;
+  }
+
+  decTemp(){
+    this.temp -= 0.5;
   }
 }

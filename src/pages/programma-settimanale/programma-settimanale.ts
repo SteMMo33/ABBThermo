@@ -17,8 +17,11 @@ export class ProgrammaSettimanalePage {
   }
   goToProgrammaGiornaliero(params){
     if (!params) params = {};
-    this.navCtrl.push(ProgrammaGiornalieroPage);
-  }goToElencoTermostati(params){
+    console.log(params)
+    this.navCtrl.push(ProgrammaGiornalieroPage, {'dayDesc': params});
+  }
+  
+  goToElencoTermostati(params){
     if (!params) params = {};
     this.navCtrl.push(ElencoTermostatiPage);
   }goToTemperatura(params){
