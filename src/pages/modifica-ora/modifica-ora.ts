@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { ElencoTermostatiPage } from '../elenco-termostati/elenco-termostati';
 import { TemperaturaPage } from '../temperatura/temperatura';
 import { ElencoPresetPage } from '../elenco-preset/elenco-preset';
@@ -14,7 +14,7 @@ import { ProgrammaGiornalieroPage } from '../programma-giornaliero/programma-gio
 })
 export class ModificaOraPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertController: AlertController) {
   }
   goToElencoTermostati(params){
     if (!params) params = {};
@@ -43,4 +43,27 @@ export class ModificaOraPage {
     this.navCtrl.pop();
   }
   
+  async askSecure(){
+    const alert = await this.alertController.create({
+      title: 'Sei sicuro?',
+      message: 'Sei sicuro di voler cancellare questa impostazione <strong>text</strong>!!!',
+      buttons: [
+        {
+          text: 'Annulla',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Si',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
 }
