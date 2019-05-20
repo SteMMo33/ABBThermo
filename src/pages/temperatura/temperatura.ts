@@ -29,13 +29,16 @@ export class TemperaturaPage {
   }goToProgrammaGiornaliero(params){
     if (!params) params = {};
     this.navCtrl.push(ProgrammaGiornalieroPage);
-  }goToElencoTermostati(params){
+  }
+  goToElencoTermostati(params){
     if (!params) params = {};
     this.navCtrl.push(ElencoTermostatiPage);
-  }goToTemperatura(params){
+  }
+  goToTemperatura(params){
     if (!params) params = {};
     this.navCtrl.push(TemperaturaPage);
-  }goToModificaOra(params){
+  }
+  goToModificaOra(params){
     if (!params) params = {};
     this.navCtrl.push(ModificaOraPage);
   }

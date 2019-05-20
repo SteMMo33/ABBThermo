@@ -8,9 +8,10 @@ import { ElencoPresetPage } from '../elenco-preset/elenco-preset';
 })
 export class ModificaTemperaturaPage {
 
-  private temp = 17.5
+  private temp = 17.5;
 
   constructor(public navCtrl: NavController) {
+	  
   }
   goToElencoPreset(params){
     if (!params) params = {};
